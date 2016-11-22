@@ -104,7 +104,7 @@ function draw() {
 	ctx.fillRect(food.x * size + 1, food.y * size + 1, size - 2, size - 2);
 }
 
-var FPS = 8;
+var FPS = 15;
 setInterval(function() {
 	update();
 	draw();
