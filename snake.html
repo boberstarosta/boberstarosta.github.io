@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<title>snake</title>
+	<style>
+		canvas {
+			border:1px solid gray;
+			background-color: lightgray;
+	}
+	</style>
+</head>
+
+<body>
+	<h1>Snake</h1>
+	
+	<h2>Instructions</h2>
+	<ul>
+		<li>Use <kbd>&uarr;</kbd>, <kbd>&larr;</kbd>, <kbd>&darr;</kbd>, <kbd>&rarr;</kbd> arrow keys to control the snake.</li>
+		<li>Avoid hitting borders or your own tail.</li>
+		<li>Eat <span style="color: green">&#9632;</span> food and your snake will grow.</li>
+		<li>You get score for eating food.</li>
+		<li>Press <kbd>Pause/Break</kbd> to pause the game.</li>
+	</ul>
+	
+	<canvas id="canvas" width="400" height="400"></canvas>
+	
+	<p id="score" class="game_info">Score:</p>
+	
+	<p id="paused_text" class="game_info">Game paused. Press any key to continue.</p>
+	
+	<p id="game_over_text" class="game_info">Game over! Press any key to start over.</p>
+	
+	<script src="snake.js"></script>
+</body>
+</html>
+
