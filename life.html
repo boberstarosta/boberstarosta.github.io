@@ -1,11 +1,17 @@
 
 <!DOCTYPE html>
+
 <html>
+
 <head>
 	<meta charset="UTF-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="description" content="Trying out jQuery - home page"/>
+	<meta name="keywords" content="html,html5,html5 tutorial,learning,jQuery,JavaScript"/>
+	<meta name="robots" content="index, follow"/>
 	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-	<title>game of life</title>
+	<script src="script.js"></script>
+	<link rel="stylesheet" href="styles.css"/>
+	<title>boberstarosta: game of life</title>
 	<style>
 		canvas {
 			border:1px solid gray;
@@ -15,10 +21,18 @@
 </head>
 
 <body>
-	<h2>Game of life</h2>
-	
-	<canvas id="canvas" width="600" height="600"></canvas>
-	
-	<script src="life.js"></script>
+	<div id="wrapper">
+		<header></header>
+		<nav></nav>
+		<main>
+			<section>
+				<h2>Game of life</h2>
+				<canvas id="canvas" width="600" height="600"></canvas>	
+				<script src="life.js"></script>
+			</section>
+		</main>
+		<footer></footer>
+	</div>
 </body>
+
 </html>
