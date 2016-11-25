@@ -11,6 +11,8 @@ var score;
 var paused = true;
 var game_over = false;
 
+document.getElementById("high_score").innerHTML = localStorage["high_score"];
+
 function createSnake(length) {
 	var arr = [];
 	for(var i=length+1; i>0; i--) {
@@ -59,12 +61,21 @@ function checkFood() {
 	}
 }
 
+function gameOver() {
+	game_over = true;
+	if(score > localStorage.high_score)
+	{
+		localStorage["high_score"] = score;
+		document.getElementById("high_score").innerHTML = localStorage["high_score"];
+	}
+}
+
 function checkCollision() {
 	if(snakeArr[0].x < 0 || snakeArr[0].y < 0 ||
 		snakeArr[0].x >= Math.floor(canvas.width / size) ||
 		snakeArr[0].y >= Math.floor(canvas.height / size) ||
 		doesSnakeContain(2, snakeArr[0].x,snakeArr[0].y)) {
-			game_over = true;
+			gameOver();
 	}
 }
 
@@ -104,8 +115,6 @@ function draw() {
 	ctx.fillRect(food.x * size + 1, food.y * size + 1, size - 2, size - 2);
 }
 
-init();
-
 var FPS = 15;
 setInterval(function() {
 	update();
@@ -113,11 +122,6 @@ setInterval(function() {
 }, 1000 / FPS);
 
 $(document).keydown(function(e){
-	paused = false;
-	if(game_over) {
-		game_over = false;
-		init();
-	}
 	var key = e.which;
 	if(key == "37" && dir != "right") {
 		next_dir = "left";
@@ -129,7 +133,21 @@ $(document).keydown(function(e){
 		next_dir = "down";
 	} else if(key == "19") {
 		paused = true;
-	}
+	} 
+	if(game_over && key == "32") {
+		game_over = false;
+		paused = true;
+		init();
+	} else if(!paused && key == "32") {
+		paused = true;
+	} else paused = false;
 });
 
+function resetHighScore() {
+	if(confirm("Are you sure you want to permanently remove highest score?")) {
+		localStorage["high_score"] = 0;
+		document.getElementById("high_score").innerHTML = localStorage["high_score"];
+	}
+}
 
+onload = init;
