@@ -104,6 +104,8 @@ function draw() {
 	ctx.fillRect(food.x * size + 1, food.y * size + 1, size - 2, size - 2);
 }
 
+init();
+
 var FPS = 15;
 setInterval(function() {
 	update();
@@ -130,5 +132,4 @@ $(document).keydown(function(e){
 	}
 });
 
-onload = init;
 
