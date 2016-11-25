@@ -6,37 +6,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 	<title>snake</title>
-	<style>
-		canvas {
-			border:1px solid gray;
-			background-color: lightgray;
-	}
-	</style>
+	<link rel="stylesheet" href="styles.css"/>
 </head>
 
 <body>
-	<h1>Snake</h1>
+	<main id="wrapper">
+		<h1 id="title_text">Snake</h1>
 	
-	<h2>Instructions</h2>
-	<ul>
-		<li>Use <kbd>&uarr;</kbd>, <kbd>&larr;</kbd>, <kbd>&darr;</kbd>, <kbd>&rarr;</kbd> arrow keys to control the snake.</li>
-		<li>Avoid hitting borders or your own tail.</li>
-		<li>Eat <span style="color: green">&#9632;</span> food and your snake will grow.</li>
-		<li>You get score for eating food.</li>
-		<li>Press <kbd>space</kbd> to pause the game.</li>
-	</ul>
+		<h3 id="score">score:</h3>
+		<canvas id="canvas" width="400" height="400"></canvas>
 	
-	<canvas id="canvas" width="400" height="400"></canvas>
+		<div id="game_text" class="text">
 	
-	<h3 id="score" class="game_info">Score:</h3>
+			<p id="game_over_text" class="game_info">Game over! Press <kbd>space</kbd> to restart.</p>
 	
-	<p id="game_over_text" class="game_info">Game over! Press <kbd>space</kbd> to restart.</p>
+			<p id="paused_text" class="game_info">Game paused. Press any key to continue.</p>
 	
-	<p id="paused_text" class="game_info">Game paused. Press any key to continue.</p>
-	
-	<h3>High score</h3>
-	<p class="game_info">Highest score: <span id="high_score"></span>
-	<a href="#" onclick="resetHighScore();">reset</a></p>
+			<p>highest score: <span id="high_score"></span>
+			<a href="#" onclick="resetHighScore();">reset</a></p>
+		</div>
+		<div id="instructions">
+			<h2>Instructions</h2>
+			<ul>
+				<li>Use <kbd>&uarr;</kbd>, <kbd>&larr;</kbd>, <kbd>&darr;</kbd>, <kbd>&rarr;</kbd> arrow keys to control the snake.</li>
+				<li>Avoid hitting borders or your own tail.</li>
+				<li>Eat <span style="color: green">&#9632;</span> food and your snake will grow.</li>
+				<li>You get score for eating food.</li>
+				<li>Press <kbd>space</kbd> to pause the game.</li>
+			</ul>
+		</div>
+		<footer>&copy; Bober 2016</footer>
+	</main>
 	<script src="snake.js"></script>
 </body>
 </html>
