@@ -1,0 +1,41 @@
+body {
+	background: slategray;
+	display: inline;
+	font-size: 16px;
+	font-family: "Arial", sans-serif;
+}
+
+#title_text {
+	text-align: center;
+}
+
+#wrapper {
+	background: white;
+	padding: 1em;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+#instructions {
+	font-size: 14px;
+}
+
+.game_info {
+	font-size: 1.5em;
+}
+		
+canvas {
+	border:1px solid gray;
+	background-color: lightgray;
+	padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 400px;
+}
+		
+footer {
+	text-align: center;
+	font-size: 0.7em;
+}
