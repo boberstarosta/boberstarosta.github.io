@@ -29,7 +29,7 @@
             $ workon project-name</code>
           </p>
           <p>
-            Install Django
+            Install Django<br/>
             <code>$ pip install django<br/>
             $ django-admin --version</code>
           </p>
@@ -63,6 +63,49 @@
             <code>$ python manage.py createsuperuser</code>
           </p>
         </article>
+	<article>
+		<h2>Git</h2>
+		<h3>Setting up a new repo</h3>
+		<p>
+			Change to project directory<br>
+			<code>$ cd project-dir</code>
+			Create a new repo<br>
+			<code>$ git init</code>
+		</p>
+		<h3>Commiting</h3>
+		<p>
+			Add a file to staging<br>
+			<code>$ git add file-name</code>
+			Show status of current commit<br/>
+			<code>$ git status</code>
+			Unstage a file<br/>
+			<code>$ git rm --cached file-name</code>
+			Commit!<br/>
+			<code>$ git commit -m "commit message"</code>
+		</p>
+		<h3>Branches</h3>
+		<p>
+			Create a new branch<br/>
+			<code>$ git checkout -b branch-name</code>
+			Switch current branch<br/>
+			<code>$ git checkout branch-name</code>
+			Show branch info<br/>
+			<code>$ git branch</code>
+			Delete branch<br/>
+			<code>$ git branch -d branch-name</code>
+		</p>
+		<h3>Remote</h3>
+		<p>
+			Setup github repo<br/>
+			<code>$ git remote add origin github.repo.url</code>
+			Push the repo to github<br/>
+			<code>$ git push -u origin branch-name</code>
+			Pull the repo from github<br/>
+			<code>$ git pull origin branch-name</code>
+			Clone repo from github to current folder<br/>
+			<code>$ git clone github.repo.url</code>
+		</p>
+	</article>
 			</section>
 		</main>
 		<footer></footer>
