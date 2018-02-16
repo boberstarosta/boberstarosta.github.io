@@ -8,139 +8,113 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="load.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="load.js"></script>
 </head>
 
 <body>
     <nav></nav>
 
-	<div class="container">
-		<div class="page-header">
-			<h1 class="text-center">boberstarosta</h1>
-		</div>
-
-		<article>
-			<h2>Starting Django project</h2>
-			<p>
-				Install virtualenv and virtualenvwrapper<br/>
-				<code>$ pip install virtualenvwrapper-win<br/>
-				$ mkvirtualenv project-name<br/>
-				$ workon project-name</code>
-			</p>
-			<p>
-				Install Django<br/>
-				<code>$ pip install django<br/>
-				$ django-admin --version</code>
-			</p>
-			<p>
-				Start Django project<br/>
-				<code>$ django-admin startproject project-name</code>          
-			</p>          
-		</article>
-		
+    <div class="container">
+        <div class="page-header">
+            <h1 class="text-center">boberstarosta</h1>
+        </div>
+        
         <article>
-			<h2>Managing Django project</h2>
-			<p>
-				Start Django development server (localhost:8000)<br/>
-				<code>$ python manage.py runserver</code>
-			</p>
-			<p>
-				Create Django app<br/>
-				<code>$ python manage.py startapp app-name</code><br/>
-				Run python interactive shell<br/>
-				<code>$ python manage.py shell</code>
-			</p>
-			<h3>Database</h3>
-			<p>
-				Create migration<br/>
-				<code>$ python manage.py makemigrations polls</code>
-				Migrate<br/>
-				<code>$ python manage.py migrate</code>
-			</p>
-			<h3>Django Admin</h3>
-			<p>
-				Create an admin user<br/>
-				<code>$ python manage.py createsuperuser</code>
-			</p>
+            <h2 id="startDjango">Starting Django project</h2>
+            
+            <h5>Install virtualenv and virtualenvwrapper</h5>
+                <pre>$ pip install virtualenvwrapper-win
+$ mkvirtualenv project-name
+$ workon project-name</pre>
+            <h5>Install Django</h5>
+            <pre>$ pip install django
+$ django-admin --version</pre>
+            <h5>Start Django project</h5>
+            <pre>$ django-admin startproject project-name</pre>
         </article>
-		
-		<article>
-			<h2>Git</h2>
-			<h3>Setting up a new repo</h3>
-			<p>
-				Change to project directory<br>
-				<code>$ cd project-dir</code>
-			</p>
-			<p>
-				Create a new repo<br>
-				<code>$ git init</code>
-			</p>
-			<h3>Commiting</h3>
-			<p>
-				Add a file to staging<br>
-				<code>$ git add file-name</code>
-			</p>
-			<p>
-				Show status of current commit<br/>
-				<code>$ git status</code>
-			</p>
-			<p>
-				Unstage a file<br/>
-				<code>$ git rm --cached file-name</code>
-			</p>
-			<p>
-				Commit!<br/>
-				<code>$ git commit -m "commit message"</code>
-			</p>
-			<h3>Branches</h3>
-			<p>
-				Create a new branch<br/>
-				<code>$ git checkout -b branch-name</code>
-			</p>
-			<p>
-				Switch current branch<br/>
-				<code>$ git checkout branch-name</code>
-			</p>
-			<p>
-				Show branch info<br/>
-				<code>$ git branch</code>
-			</p>
-			<p>
-				Delete branch<br/>
-				<code>$ git branch -d branch-name</code>
-			</p>
-			<h3>Remote</h3>
-			<p>
-				Setup github repo<br/>
-				<code>$ git remote add origin github.repo.url</code>
-			</p>
-			<p>
-				Push the repo to github<br/>
-				<code>$ git push -u origin branch-name</code>
-			</p>
-			<p>
-				Pull the repo from github<br/>
-				<code>$ git pull origin branch-name</code>
-			</p>
-			<p>
-				Clone repo from github to current folder<br/>
-				<code>$ git clone github.repo.url</code>
-			</p>
-		</article>
-		
-		<article>
-			<h2>Links</h2>
-			<table class="table table-default">
-				<tbody>
-					<tr><td><a href="linkary.herokuapp.com">Linkary</a></td></tr>
-				</tbody>
-			</table>
-		</article>
-	
-	</div>
+        
+        <article>
+            <h2 id="manageDjango">Managing Django project</h2>
+            
+            <h5>Start Django development server (localhost:8000)</h5>
+            <pre>$ python manage.py runserver</pre>         
+            <h5>Create Django app<h5/>
+            <pre>$ python manage.py startapp app-name</pre>
+            <h5>Run python interactive shell<h5/>
+            <pre>$ python manage.py shell</pre>
+                
+            <h3>Database</h3>
+            <h5>Create migration</h5>
+            <pre>$ python manage.py makemigrations polls</pre>
+            <h5>Migrate</h5>
+            <pre>$ python manage.py migrate</pre>
+            
+            <h3>Django Admin</h3>
+            <h5>Create an admin user</h5>
+            <pre>$ python manage.py createsuperuser</pre>
+        </article>
+        
+        <article>
+            <h2 id="git">Git</h2>
+            
+            <h3>Setting up a new repo</h3>
+            <h5>Change to project directory</h5>
+            <pre>$ cd project-dir</pre>
+            <h5>Create a new repo</h5>
+            <pre>$ git init</pre>
+            
+            <h3>Commiting</h3>
+            <h5>Add a file to staging</h5>
+            <pre>$ git add file-name</pre>
+            
+            <h5>Show status of current commit</h5>
+            <pre>$ git status</pre>
+            
+            <h5>Unstage a file</h5>
+            <pre>$ git rm --cached file-name</pre>
+            
+            <h5>Commit!</h5>
+            <pre>$ git commit -m "commit message"</pre>
+            
+            <h3>Branches</h3>
+            <h5>Create a new branch</h5>
+            <pre>$ git checkout -b branch-name</pre>
+            
+            <h5>Switch current branch</h5>
+            <pre>$ git checkout branch-name</pre>
+            
+            <h5>Show branch info</h5>
+            <pre>$ git branch</pre>
+            
+            <h5>Delete branch</h5>
+            <pre>$ git branch -d branch-name</pre>
+            
+            <h3>Remote</h3>
+            <h5>Setup github repo</h5>
+            <pre>$ git remote add origin github.repo.url</pre>
+            
+            <h5>Push the repo to github</h5>
+            <pre>$ git push -u origin branch-name</pre>
+            
+            <h5>Pull the repo from github</h5>
+            <pre>$ git pull origin branch-name</pre>
+            
+            
+            <h5>Clone repo from github to current folder</h5>
+            <pre>$ git clone github.repo.url</pre>
+        </article>
+        
+        <article>
+            <h2 id="Links">Links</h2>
+            <p>
+                <a href="https://linkary.herokuapp.com/">Linkary</a>
+            </p>
+        </article>
+    
+    </div>
 
-	<footer></footer>
+    <footer></footer>
 
 </body>
 
