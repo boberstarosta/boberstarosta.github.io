@@ -6,7 +6,7 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 50px;
 }
-.footer {
+footer {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -14,7 +14,4 @@ body {
   height: 40px;
   background-color: #f5f5f5;
   border-top: solid #e7e7e7 1px;
-}
-.table-coin-list tr:hover {
-  color: #b30000;
 }
