@@ -1,7 +1,7 @@
 
 function load() {
-	$("#navbar").load("navbar.html");
-	$("#footer").load("footer.html");
+	$("nav").load("navbar.html");
+	$("footer").load("footer.html");
 }
 
 onload = load;
